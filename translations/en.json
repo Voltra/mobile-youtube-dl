@@ -1,1 +1,6 @@
-{}
+{
+	"404.title": "Whoops, something went wrong",
+	"404.text": "This was not supposed to happen",
+	"counter.label": "You have pushed the button this many times:",
+	"counter.tooltips.increment": "Increment"
+}

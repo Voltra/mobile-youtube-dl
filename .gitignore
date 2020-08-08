@@ -1,6 +1,9 @@
 .env
 .vscode/
 .brackets.json
+*.g.dart
+*.gr.dart
+*.config.dart
 
 
 ##### AUTOGEN
