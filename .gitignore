@@ -1,3 +1,10 @@
+.env
+.vscode/
+.brackets.json
+
+
+##### AUTOGEN
+
 # Miscellaneous
 *.class
 *.log
