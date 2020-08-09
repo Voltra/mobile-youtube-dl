@@ -20,7 +20,8 @@ class YoutubeDlApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Flutter Demo',
-			theme: defaultTheme,
+      theme: defaultTheme,
+      color: defaultTheme.accentColor,
       supportedLocales: AppLocalizations.locales,
       localeResolutionCallback: AppLocalizations.localeResolutionCallback,
       localizationsDelegates: AppLocalizations.delegates,

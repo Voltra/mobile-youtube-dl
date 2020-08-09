@@ -1,3 +1,13 @@
+# Roadmap
+
+## V1
+
+* [ ] core (restricted to best audio playlist)
+* [ ] FS interactions
+* [ ] UI form
+
+
+
 # youtubedl
 
 A new Flutter project.
