@@ -1,5 +1,6 @@
 import 'package:youtubedl/domain/extractors/Extractor.dart';
 
+/// see https://github.com/ytdl-org/youtube-dl/blob/master/youtube_dl/extractor/youtube.py#L58
 class YoutubeBaseInfoExtractor extends InfoExtractor {
   static const LOGIN_URL = "https://accounts.google.com/ServiceLogin";
   static const TWOFACTOR_URL = "https://accounts.google.com/signin/challenge";

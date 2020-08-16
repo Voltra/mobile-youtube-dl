@@ -2,6 +2,7 @@ import 'dart:io';
 
 import 'package:youtubedl/domain/exceptions/ExtractorException.dart';
 
+/// see https://github.com/ytdl-org/youtube-dl/blob/master/youtube_dl/extractor/common.py#L85
 abstract class InfoExtractor {
   dynamic _downloader = null;
   bool _ready = false;
@@ -9,6 +10,7 @@ abstract class InfoExtractor {
 
   InfoExtractor(this._downloader);
 
+  /// see https://github.com/ytdl-org/youtube-dl/blob/master/youtube_dl/extractor/common.py#L524
   Future extract(String url) async {
     try {
       await initialize();
@@ -22,6 +24,7 @@ abstract class InfoExtractor {
 
   Future _realExtract(String url);
 
+  /// see https://github.com/ytdl-org/youtube-dl/blob/master/youtube_dl/extractor/common.py#L426
   Future initialize() async {
     if (!_ready) {
       await _realInitialize();
@@ -32,9 +35,11 @@ abstract class InfoExtractor {
   Future _realInitialize();
 }
 
+/// see https://github.com/ytdl-org/youtube-dl/blob/master/youtube_dl/extractor/common.py#L2972
 abstract class SearchInfoExtractor extends InfoExtractor {
   SearchInfoExtractor(downloader) : super(downloader);
 
+  /// see https://github.com/ytdl-org/youtube-dl/blob/master/youtube_dl/extractor/common.py#L2987
   @override
   Future _realExtract(String url) async {
     final matches = _validUrlPattern.allMatches(url);
@@ -67,15 +72,18 @@ abstract class SearchInfoExtractor extends InfoExtractor {
     }
   }
 
+  /// see https://github.com/ytdl-org/youtube-dl/blob/master/youtube_dl/extractor/common.py#L2984
   bool suitable(String url) {
     return _validUrlPattern.hasMatch(url);
   }
 
+  /// see https://github.com/ytdl-org/youtube-dl/blob/master/youtube_dl/extractor/common.py#L3007
   Future _getResults(String query, int n);
 
   String get _searchKey;
   int get _maxResults;
 
+  /// see https://github.com/ytdl-org/youtube-dl/blob/master/youtube_dl/extractor/common.py#L2980
   RegExp get _validUrlPattern =>
       RegExp("$_searchKey(?<prefix>|[1-9]\\d*|all):(<query>[\\s\\S]+)");
 }

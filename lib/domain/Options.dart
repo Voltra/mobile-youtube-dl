@@ -1,3 +1,5 @@
+/// see https://github.com/ytdl-org/youtube-dl/blob/master/youtube_dl/__init__.py
+/// see https://github.com/ytdl-org/youtube-dl/blob/master/youtube_dl/options.py
 class Options {
   final String url;
   final String format = "bestaudio/best";

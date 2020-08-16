@@ -2,6 +2,7 @@ import 'dart:io';
 
 import './Options.dart';
 
+/// see https://github.com/ytdl-org/youtube-dl/blob/master/youtube_dl/YoutubeDL.py
 class Downloader {
   final Options options;
 

@@ -9,8 +9,7 @@ environment:
 flutter:
   uses-material-design: true
   assets:
-    - translations/en.json
-    - translations/fr.json
+    - translations/
 
 dependencies:
   flutter:
@@ -23,6 +22,13 @@ dependencies:
   injectable: ^1.0.4
   get_it: ^4.0.4
   flutter_ffmpeg: ^0.2.10
+  division: ^0.8.8
+  super_enum: ^0.4.2
+  better_enum: ^1.0.0
+  file_picker: ^1.13.3
+  flutter_bloc: ^6.0.1
+  equatable: ^1.2.3
+  shared_preferences: ^0.5.8
 
 dev_dependencies:
   flutter_test:
@@ -31,4 +37,5 @@ dev_dependencies:
   auto_route_generator: ^0.6.8
   injectable_generator: ^1.0.4
   mockito: ^4.1.1
+  super_enum_generator: ^0.5.0
 

@@ -1,5 +1,7 @@
+import 'package:auto_route/auto_route.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:youtubedl/routing/router.gr.dart';
 import '../localization/AppLocalizations.dart';
 
 class Home extends StatefulWidget {
@@ -47,6 +49,12 @@ class _HomeState extends State<Home> {
             Text(
               '$_counter',
               style: Theme.of(context).textTheme.headline4,
+            ),
+            IconButton(
+              icon: Icon(Icons.brush),
+              onPressed: () {
+                ExtendedNavigator.of(context).push(Routes.theming);
+              },
             ),
           ],
         ),

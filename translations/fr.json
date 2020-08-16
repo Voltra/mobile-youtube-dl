@@ -1,1 +1,6 @@
-{}
+{
+	"404.title": "Oups, il y a eu un petit problème",
+	"404.text": "Une erreur inattendue est survenue",
+	"counter.label": "Nombre d'appuis :",
+	"counter.tooltips.increment": "Incrémenter"
+}
